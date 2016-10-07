@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+ * Atividade Complementar: Disciplina de Sistemas de Comunicação
+ * Curso: Engenharia da Computação - Universidade de Pernambuco
+ * Profesosr: Carmelo Filho
+ * Aluno: Ericks da Silva Rodrigues
+-->
+<html>
+    <head>
+        <title>Relação de Gráficos de Distância ASK PSK</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    </head>
+    <body>
+        Informe a Amplitude do Sinal: <input type="number" id="amplitude" /> <br/>
+        Informe o Expoente da base 2 referente ao número de Bits: <input type="number" id="expoente" /> <br/>
+        <input type="button" id="computar" value="Calcular"/>
+        <div id="cl"></div>
+        <div id="chart" style="width: 900px; height: 500px"></div>
+        <script type="text/javascript" src="chart.js"></script>
+        <script type="text/javascript">
+            document.getElementById("computar").addEventListener("click", function () {
+                var amp = document.getElementById("amplitude").value;
+                var exp = document.getElementById("expoente").value;
+                computarChart(amp,exp);
+           });
+
+
+        </script>
+
+    </body>
+</html>
